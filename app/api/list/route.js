@@ -5,7 +5,7 @@ export async function GET(request) {
  //fetch data from upstash
 
   return fetch(url,{
-    next: { revalidate: 60 }, // Revalidate every 60 seconds
+    next: { revalidate: 1 }, // Revalidate every 60 seconds
   }) 
     .then((r) => r.json())
     .then((data) => {
