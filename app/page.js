@@ -99,7 +99,7 @@ export default function Home() {
           <a style={{textDecoration:"underline"}}href="https://upstash.com/" target="_blank"> Upstash Redis</a>,
           <a style={{textDecoration:"underline"}}href="https://vercel.com/docs/functions" target="_blank"> Vercel Functions</a>
 
-          <a href="https://github.com/minoritydev" target="_blank">
+          <a href="https://github.com/minoritydev/nextjs-serverless-todo-app/tree/master" target="_blank">
             &lt; Github /&gt;
           </a>
           
