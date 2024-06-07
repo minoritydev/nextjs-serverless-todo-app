@@ -16,8 +16,8 @@ export default function Home() {
     setLoading(true);
     event.preventDefault();
     fetch("/api/add?todo=" + todo)
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         loadTodos();
       });
   };
@@ -25,8 +25,8 @@ export default function Home() {
   let removeTodo = (rtodo) => {
     setLoading(true);
     fetch("/api/remove?todo=" + rtodo)
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         loadTodos();
       });
   };
@@ -34,10 +34,11 @@ export default function Home() {
   let loadTodos = () => {
     console.log("load todos");
     fetch("/api/list", { cache: "no-store" })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         setData(data);
         setLoading(false);
+        console.log(data);
       });
   };
  

@@ -1,5 +1,6 @@
 export const dynamic = "force-dynamic";
 const token = process.env.DB_TOKEN;
+
 export async function GET(request) {
   if (!request.nextUrl.searchParams.get("todo")) {
     return new Response("Todo is blank :(", {
@@ -11,7 +12,7 @@ export async function GET(request) {
 
   //make a get request using url
 
-  return fetch(url) 
+  return fetch(url, { cache: "no-store" }) 
     .then((r) => r.json())
     .then((data) => {
       let result = JSON.stringify(data.result);
